@@ -9,10 +9,11 @@ package ch.hslu.oop.sw05a011;
  *
  * @author lion
  */
-public class N extends Element {
-
-    public N(double temperaturC) {
+public class ElementCreator extends Element implements Nameable {
+    
+    public ElementCreator(double temperaturC, String name) {
         super(temperaturC);
+        this.name = name;
     }
 
     @Override
@@ -28,11 +29,18 @@ public class N extends Element {
 
     @Override
     public void getZustand() {
-        if(temperaturC < -195.8d){
-                    if(temperaturC < -210d){zustand = "fest";}
+        //wenn temp kleiner als gastemp gehe in schleife, sonst gas
+                if(temperaturC < 1749d){
+                    //wenn temp kleiner als schmelz dann gleich fest sonst flüssig
+                    if(temperaturC < 327.5d){zustand = "fest";}
                     else{zustand = "fluessig";}
                 }else{zustand = "gas";}
-                System.out.println("N" + " | " + zustand);
+                System.out.println(name +  " | " + zustand);
+    }
+
+    @Override
+    public void getName(String name) {
+        this.name = name;
     }
 
 }

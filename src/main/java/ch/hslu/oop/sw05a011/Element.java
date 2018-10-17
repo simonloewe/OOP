@@ -12,7 +12,8 @@ package ch.hslu.oop.sw05a011;
 public abstract class Element {
     
     protected double temperaturC; 
-    String zustand;  
+    protected String zustand;  
+    protected String name;
     
     //Konstruktor mit einem double Parameter
     public Element(double temperaturC){
@@ -23,6 +24,6 @@ public abstract class Element {
     
     public abstract double getTemperaturC();
     
-    public abstract String getZustand(); 
+    public abstract void getZustand(); 
     
 }

@@ -28,8 +28,12 @@ public class Hg extends Element {
     }
 
     @Override
-    public String getZustand() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public void getZustand() {
+        if(temperaturC < 357d){
+                    if(temperaturC < -38.83d){zustand = "fest";}
+                    else{zustand = "fluessig";}
+                }else{zustand = "gas";}
+                System.out.println("Hg" + " | " + zustand);
     }
 
 

@@ -18,6 +18,14 @@ public class Main {
         element2.getTemperaturC();
         element3.getTemperaturC();
         
+        element1.getZustand();
+        element2.getZustand();
+        
+        
+        ElementCreator creatingElement1 = new ElementCreator(200, "Sauerstoff");
+        creatingElement1.getTemperaturC();
+        creatingElement1.getZustand();
+        
     }
     
 }
