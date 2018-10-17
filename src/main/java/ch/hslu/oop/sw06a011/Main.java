@@ -3,7 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package ch.hslu.oop.sw05a011;
+package ch.hslu.oop.sw06a011;
+
+import ch.hslu.oop.sw05a011.*;
 
 /**
  *
@@ -20,11 +22,8 @@ public class Main {
         
         element1.getZustand();
         element2.getZustand();
-        
-        
-        ElementCreator creatingElement1 = new ElementCreator(200, "Sauerstoff");
-        creatingElement1.getTemperaturC();
-        creatingElement1.getZustand();
+       
+        element2.toString();
         
     }
     

@@ -3,18 +3,26 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package ch.hslu.oop.sw05a011;
+package ch.hslu.oop.sw06a011;
+
+import ch.hslu.oop.sw05a011.*;
 
 /**
  *
  * @author lion
  */
-public class N extends Element {
-
-    public N(double temperaturC) {
+public class Hg extends Element {
+    
+    public Hg(double temperaturC){
+        /** sucht in der oberklasse nach einem Konstruktor mit einem double Parameter*/ 
         super(temperaturC);
     }
 
+    @Override
+    public void setTemperaturC(double temperaturC) {
+        this.temperaturC = temperaturC; 
+    }
+    
     @Override
     public double getTemperaturC() {
         System.out.println(temperaturC);
@@ -22,17 +30,15 @@ public class N extends Element {
     }
 
     @Override
-    public void setTemperaturC(double temperaturC) {
-        this.temperaturC = temperaturC;
-    }
-
-    @Override
     public void getZustand() {
-        if(temperaturC < -195.8d){
-                    if(temperaturC < -210d){zustand = "fest";}
+        if(temperaturC < 357d){
+                    if(temperaturC < -38.83d){zustand = "fest";}
                     else{zustand = "fluessig";}
                 }else{zustand = "gas";}
-                System.out.println("N" + " | " + zustand);
+                System.out.println("Hg" + " | " + zustand);
     }
 
+
+ 
+    
 }

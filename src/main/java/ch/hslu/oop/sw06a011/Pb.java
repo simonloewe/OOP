@@ -3,15 +3,17 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package ch.hslu.oop.sw05a011;
+package ch.hslu.oop.sw06a011;
+
+import ch.hslu.oop.sw05a011.*;
 
 /**
  *
  * @author lion
  */
-public class N extends Element {
+public class Pb extends Element {
 
-    public N(double temperaturC) {
+    public Pb(double temperaturC) {
         super(temperaturC);
     }
 
@@ -28,11 +30,19 @@ public class N extends Element {
 
     @Override
     public void getZustand() {
-        if(temperaturC < -195.8d){
-                    if(temperaturC < -210d){zustand = "fest";}
+        //wenn temp kleiner als gastemp gehe in schleife, sonst gas
+                if(temperaturC < 1749d){
+                    //wenn temp kleiner als schmelz dann gleich fest sonst flüssig
+                    if(temperaturC < 327.5d){zustand = "fest";}
                     else{zustand = "fluessig";}
                 }else{zustand = "gas";}
-                System.out.println("N" + " | " + zustand);
+                System.out.println("Pb" +  " | " + zustand);
+    }
+    
+    @Override
+    public String toString(){
+        super.toString();
+        return "Testing";
     }
 
 }

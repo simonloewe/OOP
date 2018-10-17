@@ -22,13 +22,19 @@ public class Pb extends Element {
     }
 
     @Override
-    public String getZustand() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public void setTemperaturC(double temperaturC) {
+        this.temperaturC = temperaturC;
     }
 
     @Override
-    public void setTemperaturC(double temperaturC) {
-        this.temperaturC = temperaturC; 
+    public void getZustand() {
+        //wenn temp kleiner als gastemp gehe in schleife, sonst gas
+                if(temperaturC < 1749d){
+                    //wenn temp kleiner als schmelz dann gleich fest sonst flüssig
+                    if(temperaturC < 327.5d){zustand = "fest";}
+                    else{zustand = "fluessig";}
+                }else{zustand = "gas";}
+                System.out.println("Pb" +  " | " + zustand);
     }
-    
+
 }

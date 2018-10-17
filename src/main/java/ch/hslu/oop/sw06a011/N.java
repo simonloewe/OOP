@@ -3,7 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package ch.hslu.oop.sw05a011;
+package ch.hslu.oop.sw06a011;
+
+import ch.hslu.oop.sw05a011.*;
 
 /**
  *
