@@ -24,7 +24,7 @@ public class Main {
         element2.getZustand();
        
         element2.toString();
-        
+        element2.outOverwriten();
     }
     
 }

@@ -16,6 +16,7 @@ public abstract class Element {
     protected double temperaturC; 
     protected String zustand;  
     protected String name;
+    protected String overwriten;
     
     //Konstruktor mit einem double Parameter
     public Element(double temperaturC){
@@ -30,6 +31,7 @@ public abstract class Element {
     
     @Override
     public String toString(){
-        return "Hello";
+        overwriten = "Hello";
+        return overwriten;
     }
 }
