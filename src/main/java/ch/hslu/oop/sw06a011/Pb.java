@@ -12,6 +12,8 @@ import ch.hslu.oop.sw05a011.*;
  * @author lion
  */
 public class Pb extends Element {
+    
+    protected String overwriten2;
 
     public Pb(double temperaturC) {
         super(temperaturC);
@@ -41,8 +43,15 @@ public class Pb extends Element {
     
     @Override
     public String toString(){
+        //nimmt die implementation von der oberklasse
         super.toString();
-        return "Testing";
+        //macht seine eigene implementation
+        overwriten2 = "Goodbye";
+        return overwriten2;
+    }
+    
+    public void outOverwriten(){
+        System.out.println(overwriten + overwriten2);
     }
 
 }
