@@ -10,21 +10,14 @@ package ch.hslu.oop.sw08a03;
  * @author lion
  */
 public enum Hg {
-    SOLID(200){
-        public Hg state(){return SOLID;}
-    },
-    LIQUID(100){
-        public Hg state(){return LIQUID;}
-    },
-    GAS(0){
-        public Hg state(){return GAS;}
-    };
+    SOLID, LIQUID, GAS; 
     
-    public int temp;
+    int temperatur;
     
-    Hg(int temp){
-        this.temp = temp;
-    }    
+    public int getTemperatur(int temperatur){
+        this.temperatur = temperatur; 
+        return temperatur;
+    }
     
-    public abstract Hg state();
+   
 }
